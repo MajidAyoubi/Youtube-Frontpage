@@ -1,0 +1,148 @@
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.video-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 40px;
+} 
+
+@media (min-width:200px) and (max-width: 490px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 491px) and (max-width: 817px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width:818px) and (max-width: 1199) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+}
+
+.thumbnail-row {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+img {
+width: 100%;
+border-radius: 8px;
+}
+
+.profile {
+  width: 30px;
+  border-radius: 50px;
+  margin-left: 3px;
+}
+
+.title-txt {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.author-txt,.stats-txt {
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+  margin-bottom: 5px;
+}
+
+.video-timer {
+  background-color: black;
+  color: white;
+  position: absolute;
+  right: 6px;
+  bottom: 10px;
+  padding: 4px 4px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 2px;
+  opacity:90%;
+}
+
+.profile-picture-container {
+  position: relative;
+  display: inline-block;
+}
+
+.img-hover {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-right: 8px;
+}
+
+.tooltip-box {
+  background-color: white;
+  display: flex; 
+  align-items: center;
+  pointer-events: none;
+  position: absolute;
+  padding: 10px 16px;
+  box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  z-index: 300;
+  opacity: 0;
+  width: 200px;
+}
+
+.channel-name-hover {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.views-hover {
+  color: rgb(96, 96, 96);
+  font-size: 14px;
+}
+
+.profile-picture-container:hover .tooltip-box{
+  opacity: 1;
+}
+
+.title-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.threedot-txt {
+  font-size: 18px;
+  margin-top: -2px;
+  cursor: pointer;
+  border-radius: 100%;
+  border: none;
+  opacity: 0;
+  color: black;
+}
+
+.threedot-txt:hover {
+  background-color: rgb(221, 221, 221);
+  transition: 0.3s;
+}
+
+.info-txt:hover .threedot-txt,
+.video-info-grid:hover .threedot-txt{
+opacity: 1;
+}
